@@ -46,17 +46,21 @@ public class NewRegisterActivity extends AppCompatActivity implements View.OnCli
 
             //show Image
             humanUri = data.getData();
+            try {
 
+                try {
+                    Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
+                            .openInputStream(humanUri));
+                    humanImageView.setImageBitmap(bitmap);
 
-                try{
-                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
-                        .openInputStream(humanUri));
-                humanImageView.setImageBitmap(bitmap);
+                    findPathAnName(humanUri);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-                    findpathAnNmae(humanUri);
             } catch (Exception e) {
                 Log.d("24MayV1", "e humanUri ==>" + e.toString());
-
+            }
 
         }  // if human
 
@@ -71,18 +75,16 @@ public class NewRegisterActivity extends AppCompatActivity implements View.OnCli
                         .openInputStream(camaraUri));
                 humanImageView.setImageBitmap(bitmap);
 
-                findpathAnNmae(camaraUri);
+                findPathAnName(camaraUri);
 
             } catch (Exception e) {
                 Log.d("24MayV1", "e camera ==>" + e.toString());
             }
-            }
-
         }   //if Camera
 
     }   //onActivity
 
-    private void findpathAnNmae(Uri uri) {
+    private void findPathAnName(Uri uri) {
         String[] strings = new String[]{MediaStore.Images.Media.DATA};
         Cursor cursor = getContentResolver().query(uri, strings, null, null, null);
 
