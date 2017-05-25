@@ -5,4 +5,18 @@
     <string name="pass1">password :</string>
     <string name="new_register">New Register</string>
     <string name="name">Name :</string>
+
+    <!--about Alert Dialog-->
+    <string name="titleHaveSpace">มีช่องว่างคะ</string>
+    <string name="messageHaveSpace">กรุณากรอกทุกช่องคะ</string>
+    <string name="titleNoImage">ยังไม่เลือกรูปคะ</string>
+    <string name="messageNoImage">กรุณาเลือกรุปคะ</string>
+    <string name="titleUserFalse">ไม่มี User นี้</string>
+    <string name="messageUserFalse">ไม่มี User นี่ใน ฐานข้อมูล</string>
+    <string name="titlePassword">Password ผิด</string>
+    <string name="messagePassword">กรุณาลองใหม่ Password ผิด</string>
+
+
+
+
 </resources>
