@@ -114,6 +114,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } else if (passwordString.equals(loginStrings[3])) {
                 //password true
                 Toast.makeText(MainActivity.this, "Welcome" + loginStrings[1], Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
+                intent.putExtra("Login", loginStrings);
+                startActivity(intent);
+                finish();
             } else {
                 //password false
                 MyAlert myAlert = new MyAlert(this);
