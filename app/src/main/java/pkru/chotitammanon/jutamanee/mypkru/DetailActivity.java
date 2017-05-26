@@ -38,17 +38,23 @@ public class DetailActivity extends FragmentActivity implements OnMapReadyCallba
         showView();
 
         //controller
+        controller();
+
+
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        aboutFragment();
+
+    }   //main method
+
+    private void controller() {
         backimageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        aboutFragment();
-
-    }   //main method
+    }
 
     private void showView() {
         nameHumamTextView.setText(nameString);

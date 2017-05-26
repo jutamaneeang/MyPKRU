@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso;
  * Created by Jane on 26/5/2560.
  */
 
-public class FriendAdapter extends BaseAdapter{
+public class FriendAdapter extends BaseAdapter {
 
     private Context context;
     private String[] nameStrings, imageStrings;
@@ -34,6 +34,7 @@ public class FriendAdapter extends BaseAdapter{
 
     @Override
     public Object getItem(int position) {
+
         return null;
     }
 
